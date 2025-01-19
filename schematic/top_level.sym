@@ -1,0 +1,28 @@
+v {xschem version=3.4.4 file_version=1.2
+}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -130 -30 130 -30 {}
+L 4 -130 30 130 30 {}
+L 4 -130 -30 -130 30 {}
+L 4 130 -30 130 30 {}
+L 4 0 -50 0 -30 {}
+L 4 -150 0 -130 0 {}
+L 4 0 30 0 50 {}
+L 4 130 0 150 0 {}
+B 5 -2.5 -52.5 2.5 -47.5 {name=1V8 dir=in}
+B 5 -2.5 47.5 2.5 52.5 {name=GND dir=in}
+B 5 -152.5 -2.5 -147.5 2.5 {name=external_antenna_in dir=in}
+B 5 147.5 -2.5 152.5 2.5 {name=final_output dir=out}
+T {SHaRk} -28.5 -8.5 0 0 0.3 0.3 {}
+T {@name} 135 -22 0 0 0.2 0.2 {}
+T {1V8} -10 -24 0 0 0.2 0.2 {}
+T {GND} -12.5 13.5 0 0 0.2 0.2 {}
+T {antenna} -125 -6.5 0 0 0.2 0.2 {}
+T {final_output} 125 -6.5 0 1 0.2 0.2 {}

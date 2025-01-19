@@ -20,8 +20,8 @@ L 4 -150 -30 -130 -30 {}
 L 4 130 50 150 50 {}
 L 4 -150 50 -130 50 {}
 L 4 -150 30 -130 30 {}
-B 5 -2.5 -82.5 2.5 -77.5 {name=1V8_in dir=in}
-B 5 -2.5 77.5 2.5 82.5 {name=GND_in dir=in}
+B 5 -2.5 -82.5 2.5 -77.5 {name=1V8 dir=in}
+B 5 -2.5 77.5 2.5 82.5 {name=GND dir=in}
 B 5 147.5 -52.5 152.5 -47.5 {name=rf_mixer_out dir=out}
 B 5 -152.5 -52.5 -147.5 -47.5 {name=RF_input dir=in}
 B 5 -152.5 -32.5 -147.5 -27.5 {name=RF_external_clock dir=in}
@@ -30,8 +30,8 @@ B 5 -152.5 47.5 -147.5 52.5 {name=IF_external_clock dir=in}
 B 5 -152.5 27.5 -147.5 32.5 {name=IF_amplifier_in dir=in}
 T {receiver} -29.5 -6 0 0 0.3 0.3 {}
 T {@name} 135 -72 0 0 0.2 0.2 {}
-T {1V8_in} 15 -46 2 0 0.2 0.2 {}
-T {GND_in} -25 46 0 0 0.2 0.2 {}
+T {1V8} 10 -46 2 0 0.2 0.2 {}
+T {GND} -12.5 46 0 0 0.2 0.2 {}
 T {rf_mixer_out} 125 -54 0 1 0.2 0.2 {}
 T {RF_input} -125 -54 0 0 0.2 0.2 {}
 T {RF_external_clock} -125 -34 0 0 0.2 0.2 {}

@@ -41,7 +41,7 @@ x2=12
 x1=3
 y1=-8}
 T {left control + LMB to active button} 230 -30 0 0 0.4 0.4 {}
-C {./rf_filter.sym} -10 -770 0 0 {name=x1}
+C {./if_filter.sym} -10 -770 0 0 {name=x1}
 C {ipin.sym} -90 -770 0 0 {name=p1 lab=input
 }
 C {opin.sym} 80 -770 0 0 {name=p3 lab=output
@@ -72,7 +72,7 @@ Vinput input 0 ac 'varvdd'
     save all
     ac dec 100 1k 1T
     remzerovec
-    write ./rf_filter.raw
+    write ./if_filter.raw
     set appendwrite
     reset
     let run = run + 1
@@ -80,11 +80,11 @@ Vinput input 0 ac 'varvdd'
 .endc"}
 C {launcher.sym} 290 -120 0 0 {name=h5
 descr="load waves" 
-tclcommand="xschem raw_read ; xschem raw_read $netlist_dir/rf_filter.raw ac "
+tclcommand="xschem raw_read ; xschem raw_read $netlist_dir/if_filter.raw ac "
 }
 C {launcher.sym} 290 -170 0 0 {name=h1
 descr="run sim" 
-tclcommand="echo ===== STARTING ===== ; cd $netlist_dir ; echo "exit" | ngspice ./rf_filter.spice ; echo ===== DONE ====="
+tclcommand="echo ===== STARTING ===== ; cd $netlist_dir ; echo "exit" | ngspice ./if_filter.spice ; echo ===== DONE ====="
 }
 C {launcher.sym} 290 -220 0 0 {name=h2
 descr="generate netlist" 
@@ -95,8 +95,8 @@ descr="run all"
 tclcommand="
 echo ===== START ===== ; 
 xschem netlist ;
-cd $netlist_dir ; echo "exit" | ngspice ./rf_filter.spice ; 
-xschem raw_read ; xschem raw_read $netlist_dir/rf_filter.raw ac ;
+cd $netlist_dir ; echo "exit" | ngspice ./if_filter.spice ; 
+xschem raw_read ; xschem raw_read $netlist_dir/if_filter.raw ac ;
 echo ===== DONE =====
 "
 }

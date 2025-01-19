@@ -7,37 +7,45 @@ S {}
 E {}
 T {we probably need some regulator and converter here} -260 -290 0 0 0.4 0.4 {}
 T {SUPERHETERODYNE RECEIVER} -340 -510 0 0 1 1 {}
-T {last update: 2025-01-05 HW} 260 320 0 0 0.4 0.4 {}
-N -410 -20 -300 -20 {
+T {last update: 2025-01-19 HW} 260 320 0 0 0.4 0.4 {}
+N -520 -40 -410 -40 {
 lab=external_antenna_in}
-N 0 -20 70 -20 {
+N 150 -40 220 -40 {
 lab=mixer_if}
-N 70 -30 70 -20 {
+N 220 -50 220 -40 {
 lab=mixer_if}
-N 0 80 350 80 {
+N 150 60 500 60 {
 lab=final_output}
-C {./asic_tl.sym} -150 30 0 0 {name=x1}
-C {./if_filter.sym} 150 -20 0 0 {name=x2}
-C {ipin.sym} -150 -200 0 0 {name=p4 lab=1V8_ext_in}
-C {ipin.sym} -150 -180 0 0 {name=p5 lab=GND_ext_in}
-C {vdd.sym} -150 -200 0 0 {name=l1 lab=1V8}
-C {gnd.sym} -150 -180 0 0 {name=l2 lab=GND}
-C {vdd.sym} -150 -50 0 0 {name=l3 lab=1V8}
-C {ipin.sym} -410 -20 0 0 {name=p1 lab=external_antenna_in}
-C {lab_pin.sym} 70 -30 0 0 {name=p2 sig_type=std_logic lab=mixer_if}
-C {vdd.sym} 150 -70 0 0 {name=l4 lab=1V8}
-C {gnd.sym} -150 110 0 0 {name=l5 lab=GND}
-C {gnd.sym} 150 30 0 0 {name=l6 lab=GND}
-C {lab_pin.sym} 240 -20 0 1 {name=p3 sig_type=std_logic lab=if_filtered}
-C {lab_pin.sym} -300 60 0 0 {name=p6 sig_type=std_logic lab=if_filtered}
-C {opin.sym} 350 80 0 0 {name=p7 lab=final_output}
-C {./rf_oscilator.sym} -340 230 0 0 {name=x3}
-C {./if_oscilator.sym} -150 230 0 0 {name=x4}
-C {lab_pin.sym} -280 230 0 1 {name=p8 sig_type=std_logic lab=rfo}
-C {lab_pin.sym} -300 0 0 0 {name=p9 sig_type=std_logic lab=rfo}
-C {lab_pin.sym} -50 230 0 1 {name=p10 sig_type=std_logic lab=ifo}
-C {lab_pin.sym} -300 80 0 0 {name=p11 sig_type=std_logic lab=ifo}
-C {vdd.sym} -380 190 0 0 {name=l7 lab=1V8}
-C {gnd.sym} -380 270 0 0 {name=l8 lab=GND}
-C {vdd.sym} -150 190 0 0 {name=l9 lab=1V8}
-C {gnd.sym} -150 270 0 0 {name=l10 lab=GND}
+N -220 -40 -150 -40 {
+lab=amplified_rf}
+N -150 -60 -150 -40 {
+lab=amplified_rf}
+N -240 -40 -220 -40 {
+lab=amplified_rf}
+C {./../schematic/asic_tl.sym} 0 10 0 0 {name=x1}
+C {./../schematic/if_filter.sym} 300 -40 0 0 {name=x2}
+C {ipin.sym} -150 -200 0 0 {name=p4 lab=1V8}
+C {ipin.sym} -150 -180 0 0 {name=p5 lab=GND}
+C {vdd.sym} 0 -70 0 0 {name=l3 lab=1V8}
+C {ipin.sym} -520 -40 0 0 {name=p1 lab=external_antenna_in}
+C {lab_pin.sym} 220 -50 0 0 {name=p2 sig_type=std_logic lab=mixer_if}
+C {vdd.sym} 300 -90 0 0 {name=l4 lab=1V8}
+C {gnd.sym} 0 90 0 0 {name=l5 lab=GND}
+C {gnd.sym} 300 10 0 0 {name=l6 lab=GND}
+C {lab_pin.sym} 390 -40 0 1 {name=p3 sig_type=std_logic lab=if_filtered}
+C {lab_pin.sym} -150 40 0 0 {name=p6 sig_type=std_logic lab=if_filtered}
+C {opin.sym} 500 60 0 0 {name=p7 lab=final_output}
+C {./../schematic/rf_oscilator.sym} -600 150 0 0 {name=x3}
+C {./../schematic/if_oscilator.sym} -640 300 0 0 {name=x4}
+C {lab_pin.sym} -540 150 0 1 {name=p8 sig_type=std_logic lab=rfo}
+C {lab_pin.sym} -150 -20 0 0 {name=p9 sig_type=std_logic lab=rfo}
+C {lab_pin.sym} -540 300 0 1 {name=p10 sig_type=std_logic lab=ifo}
+C {lab_pin.sym} -150 60 0 0 {name=p11 sig_type=std_logic lab=ifo}
+C {vdd.sym} -640 110 0 0 {name=l7 lab=1V8}
+C {gnd.sym} -640 190 0 0 {name=l8 lab=GND}
+C {vdd.sym} -640 260 0 0 {name=l9 lab=1V8}
+C {gnd.sym} -640 340 0 0 {name=l10 lab=GND}
+C {vdd.sym} -330 -90 0 0 {name=l11 lab=1V8}
+C {gnd.sym} -330 10 0 0 {name=l12 lab=GND}
+C {lab_pin.sym} -150 -60 0 0 {name=p12 sig_type=std_logic lab=filtered_rf}
+C {/home/sarvel/Projects/ASIC/superheterodyne_receiver/schematic/rf_filter.sym} -330 -40 0 0 {name=x5}

@@ -12,7 +12,8 @@ N -180 -40 0 -40 {
 lab=if_in}
 N 0 -40 0 0 {
 lab=if_in}
-N 0 -0 320 -0 {}
+N 60 0 320 0 {
+lab=out}
 C {ipin.sym} -180 -40 0 0 {name=p1 lab=if_in}
 C {opin.sym} 320 0 0 0 {name=p2 lab=out}
 C {ipin.sym} -180 90 0 0 {name=p5 lab=GND}
@@ -21,3 +22,8 @@ C {noconn.sym} -180 -100 0 1 {name=l1}
 C {ipin.sym} -180 30 0 0 {name=p3 lab=lo_in}
 C {noconn.sym} -180 90 0 1 {name=l4}
 C {noconn.sym} -180 30 0 1 {name=l2}
+C {res.sym} 30 0 1 0 {name=R1
+value=0
+footprint=1206
+device=resistor
+m=1}
